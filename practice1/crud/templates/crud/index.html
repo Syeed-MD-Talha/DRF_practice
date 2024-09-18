@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CRUD</h1>
+    {% for book in books %}
+        <div class="book-entry" style="position: relative;">
+            <h2>{{ book.name }}</h2>
+            <p><strong>Author:</strong> {{ book.author }}</p>
+            <p><strong>Price:</strong> ${{ book.price|floatformat:2 }}</p>
+            <p><strong>Description:</strong> {{ book.description|truncatewords:30 }}</p>
+            <p><strong>Published Date:</strong> {{ book.published_date|date:"F d, Y" }}</p>
+            <p><strong>Available:</strong> {% if book.is_available %}Yes{% else %}No{% endif %}</p>
+            <a href="{% url 'delete_book' book.id %}" style="position: absolute; top: 0; left: 30%; transform: translateX(-50%);">Delete</a>
+        </div>
+        <hr>
+    {% empty %}
+        <p>No books available.</p>
+    {% endfor %}
+</body>
+</html>

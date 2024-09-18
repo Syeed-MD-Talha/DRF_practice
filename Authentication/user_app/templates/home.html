@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            padding: 30px;
+            color: white;
+            text-align: center;
+            align-items: center;
+        }
+
+        header .logo {
+            float: left;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header .nav-links {
+            list-style: none;
+            float: right;
+        }
+
+        header .nav-links li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        header .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+        }
+
+        header .nav-links li a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+
+        .hero {
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+         {% for message in messages %}
+             {{message}}
+         {% endfor %}
+    {% endif %}
+    <header>
+        <nav>
+            <div class="logo">MyWebsite</div>
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                {% if request.user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">login</a> or <a href="{% url 'signup' %}">Signup</a></li>
+                {% endif %}
+                
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        {% if request.user.username %}
+        <h1>Hi {{request.user.username}}, Welcome to My Website!</h1>
+        {% else %}
+          <h1 style="color:rgba(255, 0, 0, 0.581)">Login Please !!</h1>
+        {% endif %}
+        
+    </section>
+</body>
+</html>

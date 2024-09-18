@@ -1,0 +1,122 @@
+[
+  {
+    "model": "crud.Book",
+    "pk": 1,
+    "fields": {
+      "name": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 1299,
+      "description": "A classic novel about racial injustice in the American South.",
+      "published_date": "1960-07-11",
+      "is_available": true
+    }
+  },
+  {
+    "model": "crud.Book",
+    "pk": 2,
+    "fields": {
+      "name": "1984",
+      "author": "George Orwell",
+      "price": 999,
+      "description": "A dystopian novel set in a totalitarian society.",
+      "published_date": "1949-06-08",
+      "is_available": true
+    }
+  },
+  {
+    "model": "crud.Book",
+    "pk": 3,
+    "fields": {
+      "name": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "price": 899,
+      "description": "A romantic novel of manners set in Georgian England.",
+      "published_date": "1813-01-28",
+      "is_available": true
+    }
+  },
+  {
+    "model": "crud.Book",
+    "pk": 4,
+    "fields": {
+      "name": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "price": 1099,
+      "description": "A novel about the American Dream in the Roaring Twenties.",
+      "published_date": "1925-04-10",
+      "is_available": false
+    }
+  },
+  {
+    "model": "crud.Book",
+    "pk": 5,
+    "fields": {
+      "name": "One Hundred Years of Solitude",
+      "author": "Gabriel García Márquez",
+      "price": 1499,
+      "description": "A landmark novel in the magical realism style.",
+      "published_date": "1967-05-30",
+      "is_available": true
+    }
+  },
+  {
+    "model": "crud.Book",
+    "pk": 6,
+    "fields": {
+      "name": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "price": 1199,
+      "description": "A controversial novel about teenage angst and alienation.",
+      "published_date": "1951-07-16",
+      "is_available": true
+    }
+  },
+  {
+    "model": "crud.Book",
+    "pk": 7,
+    "fields": {
+      "name": "Brave New World",
+      "author": "Aldous Huxley",
+      "price": 1099,
+      "description": "A dystopian novel envisioning a genetically modified future society.",
+      "published_date": "1932-10-27",
+      "is_available": false
+    }
+  },
+  {
+    "model": "crud.Book",
+    "pk": 8,
+    "fields": {
+      "name": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "price": 1399,
+      "description": "A fantasy novel that precedes The Lord of the Rings trilogy.",
+      "published_date": "1937-09-21",
+      "is_available": true
+    }
+  },
+  {
+    "model": "crud.Book",
+    "pk": 9,
+    "fields": {
+      "name": "Moby-Dick",
+      "author": "Herman Melville",
+      "price": 1599,
+      "description": "An epic sea-faring tale of obsession and adventure.",
+      "published_date": "1851-10-18",
+      "is_available": true
+    }
+  },
+  {
+    "model": "crud.Book",
+    "pk": 10,
+    "fields": {
+      "name": "The Alchemist",
+      "author": "Paulo Coelho",
+      "price": 999,
+      "description": "A philosophical novel about a young shepherd's journey to find his destiny.",
+      "published_date": "1988-01-01",
+      "is_available": true
+    }
+  }
+]
